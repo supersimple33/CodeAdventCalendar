@@ -13,9 +13,18 @@ public class Day1{
 		}
 
 		for (int i = 0; i < arr.size(); i++){
-			for (int j = 0; j < arr.size(); j++) {
+			for (int j = 0; j < i; j++) {
 				if (arr.get(i) + arr.get(j) == 2020) {
 					 System.out.println(arr.get(i) * arr.get(j));
+				}
+			}
+		}
+		for (int i = 0; i < arr.size(); i++){
+			for (int j = 0; j < i; j++) {
+				for (int k = 0; k < j; k++) {
+					if (arr.get(i) + arr.get(j) + arr.get(k) == 2020) {
+						System.out.println(arr.get(i) * arr.get(j) * arr.get(k));
+					}
 				}
 			}
 		}
