@@ -4,6 +4,20 @@ import java.util.ArrayList;
 import java.util.Scanner;
 public class Day1{
 	 public static void main(String []args) throws FileNotFoundException {
-		//
+		System.out.println(new File(".").getAbsolutePath());
+		File supp = new File("supp1.txt");
+		Scanner reader = new Scanner(supp);
+		ArrayList<Integer> arr = new ArrayList<Integer>();
+		while (reader.hasNextLine()) {
+			arr.add(Integer.parseInt(reader.nextLine()));
+		}
+
+		for (int i = 0; i < arr.size(); i++){
+			for (int j = 0; j < arr.size(); j++) {
+				if (arr.get(i) + arr.get(j) == 2020) {
+					 System.out.println(arr.get(i) * arr.get(j));
+				}
+			}
+		}
 	 }
 }
