@@ -3,7 +3,7 @@ import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.Scanner;
 public class Day1{
-	 public static void main(String []args) throws FileNotFoundException {
+	public static void main(String []args) throws FileNotFoundException {
 		System.out.println(new File(".").getAbsolutePath());
 		File supp = new File("supp1.txt");
 		Scanner reader = new Scanner(supp);
