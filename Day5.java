@@ -24,5 +24,11 @@ public class Day5{
 			seats.add(row * 8 + col);
 		}
 		System.out.println(Collections.max(seats));
+		Collections.sort(seats);
+		for (int i = 1; i < seats.size(); i++) {
+			if (seats.get(i) - seats.get(i - 1) != 1) {
+				System.out.println(seats.get(i) - 1);
+			}
+		}
 	}
 }
